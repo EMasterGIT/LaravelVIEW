@@ -26,6 +26,8 @@ Route::middleware(['auth'])->group(function() {
 //    Route::get('/admin/posts/{post}/delete', [\App\Http\Controllers\PostController::class, 'destroy']);
     Route::resource('admin/posts', \App\Http\Controllers\PostController::class);
 
+
+
     Route::get('/user/profile', function() {
         return view('profile');
     })->name('profile');

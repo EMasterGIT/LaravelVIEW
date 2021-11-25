@@ -20,7 +20,7 @@
                     <td>{{$post->updated_at}}</td>
                     <td>
                         <form action="{{ route('posts.destroy', ['post'=> $post->id] ) }}" method="POST">
-                            <a class="btn btn-primary">View</a>
+                            <a class="btn btn-primary" href="{{ route('posts.show', ['post'=> $post->id] ) }}">View</a>
                             <a class="btn btn-warning" href="{{ route('posts.edit', ['post'=> $post->id] ) }}">Edit</a>
                             @method('DELETE')
                             @csrf
